@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Boulangerie Délice | Produits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">🥖 Boulangerie Délice</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link active" href="produits.html">Produits</a></li>
+                <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="commande.html">Commande</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO PRODUITS AMÉLIORÉ ===== -->
+<section class="hero-produits text-center py-5">
+    <div class="container">
+
+        <h1 class="display-5 fw-bold mb-3">
+            Nos <span class="text-warning">Produits</span>
+        </h1>
+
+        <p class="lead text-muted col-lg-8 mx-auto">
+            Découvrez notre sélection artisanale de pains,
+            viennoiseries et pâtisseries préparés chaque jour
+            avec des ingrédients de qualité supérieure.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ===== FILTRES ===== -->
+<section class="py-4">
+    <div class="container text-center">
+        <div class="btn-group" role="group">
+            <button class="btn btn-outline-dark filter-btn active" data-filter="all">Tous</button>
+            <button class="btn btn-outline-dark filter-btn" data-filter="pain">Pains</button>
+            <button class="btn btn-outline-dark filter-btn" data-filter="viennoiserie">Viennoiseries</button>
+            <button class="btn btn-outline-dark filter-btn" data-filter="patisserie">Pâtisseries</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LISTE PRODUITS ===== -->
+<section class="pb-5">
+    <div class="container">
+        <div class="row g-4" id="product-list">
+
+            <!-- Produit -->
+            <div class="col-md-4 product-item" data-category="pain">
+                <div class="card shadow-sm h-100">
+                    <img src="images/1.jpeg" class="card-img-top" alt="Baguette">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Baguette Tradition</h5>
+                        <p class="card-text">Farine premium, cuisson parfaite.</p>
+                        <p class="fw-bold">1,20 $</p>
+                        <button class="btn btn-warning btn-sm add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-item" data-category="pain">
+                <div class="card shadow-sm h-100">
+                    <img src="images/2.jpeg" class="card-img-top" alt="Baguette">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Baguette Tradition</h5>
+                        <p class="card-text">Farine premium, cuisson parfaite.</p>
+                        <p class="fw-bold">1,20 $</p>
+                        <button class="btn btn-warning btn-sm add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-item" data-category="pain">
+                <div class="card shadow-sm h-100">
+                    <img src="images/3.jpeg" class="card-img-top" alt="Baguette">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Baguette Tradition</h5>
+                        <p class="card-text">Farine premium, cuisson parfaite.</p>
+                        <p class="fw-bold">1,20 $</p>
+                        <button class="btn btn-warning btn-sm add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-item" data-category="pain">
+                <div class="card shadow-sm h-100">
+                    <img src="images/2.jpeg" class="card-img-top" alt="Baguette">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Baguette Tradition</h5>
+                        <p class="card-text">Farine premium, cuisson parfaite.</p>
+                        <p class="fw-bold">1,20 $</p>
+                        <button class="btn btn-warning btn-sm add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-item" data-category="viennoiserie">
+                <div class="card shadow-sm h-100">
+                    <img src="images/1.jpeg" class="card-img-top" alt="Croissant">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Croissant Beurre</h5>
+                        <p class="card-text">Pur beurre AOP.</p>
+                        <p class="fw-bold">1,50 €</p>
+                        <button class="btn btn-warning btn-sm add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-item" data-category="patisserie">
+                <div class="card shadow-sm h-100">
+                    <img src="images/3.jpeg" class="card-img-top" alt="Gâteau">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Gâteau Chocolat</h5>
+                        <p class="card-text">Recette maison intense cacao.</p>
+                        <p class="fw-bold">15,00 $</p>
+                        <button class="btn btn-warning btn-sm add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-secondary text-white text-center py-3">
+    <p class="mb-0">© 2026 Boulangerie Délice | Tous droits réservés</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

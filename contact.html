@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Boulangerie Délice | Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">🥖 Boulangerie Délice</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+                <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="commande.html">Commande</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero-produits text-center py-5">
+    <div class="container">
+        <h1 class="display-5 fw-bold mb-3">
+            Contactez <span class="text-warning">nous</span>
+        </h1>
+        <p class="lead text-muted col-lg-8 mx-auto">
+            Une question, une demande spéciale ou une commande personnalisée ?
+            Nous sommes à votre écoute.
+        </p>
+    </div>
+</section>
+
+<!-- ===== SECTION CONTACT ===== -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Informations -->
+            <div class="col-lg-5">
+                <h3 class="mb-4">Nos Coordonnées</h3>
+
+                <p><i class="bi bi-geo-alt-fill text-warning"></i> 12 Rue du Pain, Paris</p>
+                <p><i class="bi bi-telephone-fill text-warning"></i> +33 1 23 45 67 89</p>
+                <p><i class="bi bi-envelope-fill text-warning"></i> contact@boulangeriedelice.fr</p>
+
+                <hr>
+
+                <h5>Horaires</h5>
+                <p>Lundi - Samedi : 6h00 - 19h00</p>
+                <p>Dimanche : 7h00 - 13h00</p>
+            </div>
+
+            <!-- Formulaire -->
+            <div class="col-lg-7">
+                <h3 class="mb-4">Envoyer un message</h3>
+
+                <form id="contactForm" novalidate>
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Nom complet" required>
+                            <div class="invalid-feedback">Veuillez entrer votre nom.</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                            <div class="invalid-feedback">Email valide requis.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <input type="text" class="form-control" placeholder="Sujet" required>
+                        </div>
+
+                        <div class="col-12">
+                            <textarea class="form-control" rows="5" placeholder="Votre message..." required></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn btn-warning btn-lg" type="submit">
+                                Envoyer
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== CARTE ===== -->
+<section>
+    <div class="container-fluid p-0">
+        <iframe 
+            src="https://www.google.com/maps?q=Paris&output=embed"
+            width="100%" 
+            height="350" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-secondary text-white text-center py-3">
+    <p class="mb-0">© 2026 Boulangerie Délice | Tous droits réservés</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Validation JS -->
+<script>
+(() => {
+    'use strict'
+    const form = document.getElementById('contactForm')
+
+    form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        } else {
+            event.preventDefault()
+            alert("Message envoyé avec succès !");
+            form.reset()
+        }
+        form.classList.add('was-validated')
+    })
+})()
+</script>
+
+</body>
+</html>
